@@ -1,7 +1,7 @@
 {
-  "name": "create-typescene-app",
-  "version": "1.0.0",
-  "description": "Generator for apps using the Typescene framework",
+  "name": "create-typescene-webapp",
+  "version": "1.0.1",
+  "description": "Generator for Web apps using the Typescene framework",
   "author": "Jelmer Cormont",
   "license": "MIT",
   "keywords": [
@@ -21,7 +21,7 @@
   "bin": "bin/create-typescene-webapp",
   "files": [
     "bin",
-    "index.js"
+    "dist"
   ],
   "scripts": {
     "clean": "rimraf dist",
