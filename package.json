@@ -1,0 +1,40 @@
+{
+  "name": "create-typescene-app",
+  "version": "1.0.0",
+  "description": "Generator for apps using the Typescene framework",
+  "author": "Jelmer Cormont",
+  "license": "MIT",
+  "keywords": [
+    "typescene",
+    "generator",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/typescene/create-typescene-webapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/typescene/create-typescene-webapp/issues"
+  },
+  "homepage": "http://typescene.dev/",
+  "main": "./dist/index.js",
+  "bin": "bin/create-typescene-webapp",
+  "files": [
+    "bin",
+    "index.js"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run build",
+    "prebuild": "npm run clean",
+    "build": "tsc -p src"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^12.6.6",
+    "typescript": "^3.5.3",
+    "rimraf": "^2.6.3"
+  }
+}
