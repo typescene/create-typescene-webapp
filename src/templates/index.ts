@@ -18,7 +18,7 @@ export function writeAllTemplateFiles() {
             require("./ts-webpack/src/app.ts"),
             require("./ts-webpack/src/public/index.html"),
             require("./ts-webpack/src/activities/main/activity.ts"),
-            require("./ts-webpack/src/activities/main/view/index.ts"),
+            require("./ts-webpack/src/activities/main/view.ts"),
         );
     }
     else if (!config.ts && config.bundler === "webpack") {
@@ -32,7 +32,7 @@ export function writeAllTemplateFiles() {
             require("./js-webpack/src/app.js"),
             require("./js-webpack/src/public/index.html"),
             require("./js-webpack/src/activities/main/activity.js"),
-            require("./js-webpack/src/activities/main/view/index.js"),
+            require("./js-webpack/src/activities/main/view.js"),
         );
     }
     else if (config.ts && config.bundler === "parcel") {
@@ -47,7 +47,7 @@ export function writeAllTemplateFiles() {
             require("./ts-webpack/src/tsconfig.json"),
             require("./ts-webpack/src/app.ts"),
             require("./ts-webpack/src/activities/main/activity.ts"),
-            require("./ts-webpack/src/activities/main/view/index.ts"),
+            require("./ts-webpack/src/activities/main/view.ts"),
         );
     }
     else if (!config.ts && config.bundler === "parcel") {
@@ -60,7 +60,7 @@ export function writeAllTemplateFiles() {
             require("./js-parcel/src/index.html"),
             require("./js-webpack/src/app.js"),
             require("./js-webpack/src/activities/main/activity.js"),
-            require("./js-webpack/src/activities/main/view/index.js"),
+            require("./js-webpack/src/activities/main/view.js"),
         );
     }
     else {

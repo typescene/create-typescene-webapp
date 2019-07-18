@@ -1,4 +1,4 @@
-export const name = "src/activities/main/view/index.js"
+export const name = "src/activities/main/view.js"
 export const file = `
 import { HMR } from "@typescene/webapp";
 import { UICell, UICenterRow, UILabel } from "typescene";
