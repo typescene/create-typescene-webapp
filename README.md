@@ -28,8 +28,10 @@ You may use the following command line arguments to configure the installation.
 | Argument        | Effect |
 |-----------------|-------------|
 | `--js`          | Use JS (ES6) only, instead of TypeScript |
-| `--git`         | Initialize a Git repository |
+| `--jsx`          | Include JSX (TSX) support |
 | `--bundler=`... | Use a specific bundler (either `webpack` or `parcel`) |
+| `--git`         | Initialize a Git repository |
+| `--yarn`         | Use Yarn instead of NPM |
 | `--overwrite`   | Force overwrite existing files |
 
 ## Reach Out!
