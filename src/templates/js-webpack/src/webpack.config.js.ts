@@ -13,7 +13,7 @@ module.exports = {
         path: path.resolve(__dirname, "../dist")
     },
     resolve: {
-        extensions: [".js"],
+        extensions: [".js", ".jsx"],
     },
     plugins: [
         new CopyPlugin([path.resolve(__dirname, "public")])

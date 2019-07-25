@@ -24,11 +24,17 @@ const config = {
     /** Force overwrite */
     overwrite: hasFlag("--overwrite"),
 
+    /** Use Yarn instead of NPM? */
+    yarn: hasFlag("--yarn"),
+
     /** Git init? */
     git: hasFlag("-g", "--git"),
 
     /** Use TypeScript? */
     ts: !hasFlag("-j", "--js"),
+
+    /** Use JSX/TSX? */
+    jsx: hasFlag("--jsx", "--tsx"),
 
     /** Bundler (defaults to webpack) */
     bundler: (getOption("--bundler") || getOption("-b") ||

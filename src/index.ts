@@ -39,11 +39,13 @@ function main() {
 
         // initialize NPM package
         console.log(chalk.dim.italic("Installing packages..."));
-        var npm = spawn("npm", ["install"], {
-            env: process.env,
-            stdio: "inherit",
-            detached: true
-        });
+        var npm = spawn(config.yarn ? "yarn" : "npm",
+            config.yarn ? ["install", "-s"] : ["install"],
+            {
+                env: process.env,
+                stdio: "inherit",
+                detached: true
+            });
         npm.on("close", code => {
             npm.unref();
             if (code !== 0) {
@@ -53,9 +55,9 @@ function main() {
             // add tips about `npm run`
             tips.add("Created a new app in " + chalk.blue(config.fullFolder),
                 "    " + chalk.green("cd " + config.folder),
-                "    " + chalk.green("npm run start"),
+                "    " + chalk.green(config.yarn ? "yarn run start" : "npm run start"),
                 "      to start a development server and open a browser",
-                "    " + chalk.green("npm run build"),
+                "    " + chalk.green(config.yarn ? "yarn run start" : "npm run build"),
                 "      to build a production bundle");
 
             // initialize git repository if requested
@@ -94,9 +96,11 @@ if (process.argv.some(a => a === "-h" || a === "-?" || a === "--help")) {
         " npx create-typescene-webapp " +
         chalk.green("<project-folder>") + " [options]\n");
     console.log("Options:\n\n" +
-        "  -g, --git        Initialize git repository\n" +
         "  -j, --js         Do NOT install and use TypeScript\n" +
+        "  --jsx            Include JSX support\n" +
         "  --bundler=<...>  Use a specific bundler (webpack or parcel)\n" +
+        "  --yarn           Use Yarn instead of NPM\n" +
+        "  -g, --git        Initialize git repository\n" +
         "  --overwrite      Force overwrite files in existing folder\n" +
         "  -h, --help       Print help information\n" +
         "\n");
