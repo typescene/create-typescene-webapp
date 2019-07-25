@@ -1,4 +1,6 @@
-export const name = "src/activities/main/view.js"
+import config from "../../../../../config";
+
+export const name = !config.jsx && "src/activities/main/view.js"
 export const file = `
 import { HMR } from "@typescene/webapp";
 import { UICell, UICenterRow, UILabel } from "typescene";

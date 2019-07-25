@@ -19,6 +19,7 @@ export function writeAllTemplateFiles() {
             require("./ts-webpack/src/public/index.html"),
             require("./ts-webpack/src/activities/main/activity.ts"),
             require("./ts-webpack/src/activities/main/view.ts"),
+            require("./ts-webpack/src/activities/main/view.tsx"),
         );
     }
     else if (!config.ts && config.bundler === "webpack") {
@@ -33,6 +34,7 @@ export function writeAllTemplateFiles() {
             require("./js-webpack/src/public/index.html"),
             require("./js-webpack/src/activities/main/activity.js"),
             require("./js-webpack/src/activities/main/view.js"),
+            require("./js-webpack/src/activities/main/view.jsx"),
         );
     }
     else if (config.ts && config.bundler === "parcel") {
@@ -48,6 +50,7 @@ export function writeAllTemplateFiles() {
             require("./ts-webpack/src/app.ts"),
             require("./ts-webpack/src/activities/main/activity.ts"),
             require("./ts-webpack/src/activities/main/view.ts"),
+            require("./ts-webpack/src/activities/main/view.tsx"),
         );
     }
     else if (!config.ts && config.bundler === "parcel") {
@@ -61,6 +64,7 @@ export function writeAllTemplateFiles() {
             require("./js-webpack/src/app.js"),
             require("./js-webpack/src/activities/main/activity.js"),
             require("./js-webpack/src/activities/main/view.js"),
+            require("./js-webpack/src/activities/main/view.jsx"),
         );
     }
     else {
@@ -70,6 +74,7 @@ export function writeAllTemplateFiles() {
 
 function writeTemplates(...templates: { name: string, file: string }[]) {
     for (const { name, file } of templates) {
+        if (!name) continue;
         fs.mkdirSync(path.dirname(name), { recursive: true });
         fs.writeFileSync(name, String(file).trimLeft());
     }
