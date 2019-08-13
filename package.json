@@ -1,6 +1,6 @@
 {
   "name": "create-typescene-webapp",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Generator for Web apps using the Typescene framework",
   "author": "Jelmer Cormont",
   "license": "MIT",
