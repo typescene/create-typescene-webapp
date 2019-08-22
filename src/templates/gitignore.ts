@@ -1,4 +1,4 @@
-export const name = ".gitignore"
+export const name = ".gitignore";
 export const file = `
 # Dependencies:
 node_modules
@@ -12,4 +12,4 @@ npm-debug.log*
 *.log
 .DS_Store
 Thumbs.db
-`
+`;

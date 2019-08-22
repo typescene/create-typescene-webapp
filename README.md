@@ -12,7 +12,7 @@ To create a new app in a folder named `my-webapp`, run the following command in 
 npx create-typescene-webapp my-webapp
 ```
 
-This will create a folder *inside* the current folder, copy source files, and install packages using NPM.
+This will create a folder _inside_ the current folder, copy source files, and install packages using NPM.
 
 After installation, run the following commands to start a development server and open your default browser:
 
@@ -25,14 +25,14 @@ npm run start
 
 You may use the following command line arguments to configure the installation.
 
-| Argument        | Effect |
-|-----------------|-------------|
-| `--js`          | Use JS (ES6) only, instead of TypeScript |
-| `--jsx`          | Include JSX (TSX) support |
+| Argument        | Effect                                                |
+| --------------- | ----------------------------------------------------- |
+| `--js`          | Use JS (ES6) only, instead of TypeScript              |
+| `--jsx`         | Include JSX (TSX) support                             |
 | `--bundler=`... | Use a specific bundler (either `webpack` or `parcel`) |
-| `--git`         | Initialize a Git repository |
-| `--yarn`         | Use Yarn instead of NPM |
-| `--overwrite`   | Force overwrite existing files |
+| `--git`         | Initialize a Git repository                           |
+| `--yarn`        | Use Yarn instead of NPM                               |
+| `--overwrite`   | Force overwrite existing files                        |
 
 ## Reach Out!
 
