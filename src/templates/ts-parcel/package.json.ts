@@ -1,7 +1,8 @@
 import config from "../../config";
 
-export const name = "package.json"
-export const file = JSON.stringify({
+export const name = "package.json";
+export const file = JSON.stringify(
+  {
     "name": config.name,
     "version": "1.0.0",
     "private": true,
@@ -11,14 +12,17 @@ export const file = JSON.stringify({
     "keywords": [],
     "main": "index.js",
     "scripts": {
-        "start": "parcel src/index.html --open",
-        "build": "parcel build src/index.html"
+      "start": "parcel src/index.html --open",
+      "build": "parcel build src/index.html",
     },
     "dependencies": {
-        "@typescene/webapp": "^2.0.0"
+      "@typescene/webapp": "^2.0.0",
     },
     "devDependencies": {
-        "typescript": "^3.4.5",
-        "parcel-bundler": "^1.12.3"
-    }
-}, undefined, "  ")
+      "typescript": "^3.4.5",
+      "parcel-bundler": "^1.12.3",
+    },
+  },
+  undefined,
+  "  "
+);
