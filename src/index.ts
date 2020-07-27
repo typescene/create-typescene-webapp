@@ -1,4 +1,4 @@
-import chalk from "chalk";
+import * as chalk from "chalk";
 import { spawn } from "child_process";
 import * as fs from "fs";
 import config from "./config";
@@ -55,9 +55,9 @@ function main() {
       tips.add(
         "Created a new app in " + chalk.blue(config.fullFolder),
         "    " + chalk.green("cd " + config.folder),
-        "    " + chalk.green(config.yarn ? "yarn run start" : "npm run start"),
+        "    " + chalk.green(config.yarn ? "yarn start" : "npm start"),
         "      to start a development server and open a browser",
-        "    " + chalk.green(config.yarn ? "yarn run start" : "npm run build"),
+        "    " + chalk.green(config.yarn ? "yarn start" : "npm build"),
         "      to build a production bundle"
       );
 

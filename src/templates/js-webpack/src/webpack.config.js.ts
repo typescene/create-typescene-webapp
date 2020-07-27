@@ -42,7 +42,14 @@ module.exports = {
     ]
   },
   plugins: [
-    new CopyPlugin([path.resolve(__dirname, "public")])
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "public"),
+          to: path.resolve(__dirname, "../dist"),
+        },
+      ]
+    })
   ]
 };
 `;

@@ -1,4 +1,5 @@
 import config from "../../config";
+import versions from "../../versions";
 
 export const name = "package.json";
 export const file = JSON.stringify(
@@ -19,10 +20,11 @@ export const file = JSON.stringify(
       "plugins": ["@babel/plugin-transform-runtime"],
     },
     "dependencies": {
-      "@typescene/webapp": "^2.0.0",
+      "typescene": versions.typescene,
+      "@typescene/webapp": versions["@typescene/webapp"],
     },
     "devDependencies": {
-      "parcel-bundler": "^1.12.3",
+      "parcel-bundler": versions["parcel-bundler"],
     },
   },
   undefined,

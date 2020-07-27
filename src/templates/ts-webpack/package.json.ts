@@ -1,4 +1,5 @@
 import config from "../../config";
+import versions from "../../versions";
 
 export const name = "package.json";
 export const file = JSON.stringify(
@@ -10,21 +11,23 @@ export const file = JSON.stringify(
     "author": "Your name",
     "license": "UNLICENSED",
     "keywords": [],
+    "prettier": {},
     "main": "index.js",
     "scripts": {
       "start": "webpack-dev-server --hot --config src/webpack.config.js --no-info --open",
       "build": "webpack -p --config src/webpack.config.js",
     },
     "dependencies": {
-      "@typescene/webapp": "^2.0.0",
+      "typescene": versions.typescene,
+      "@typescene/webapp": versions["@typescene/webapp"],
     },
     "devDependencies": {
-      "typescript": "^3.4.5",
-      "webpack": "^4.31.0",
-      "webpack-cli": "^3.3.2",
-      "webpack-dev-server": "^3.3.1",
-      "copy-webpack-plugin": "^5.0.3",
-      "ts-loader": "^6.0.0",
+      "typescript": versions.typescript,
+      "webpack": versions.webpack,
+      "webpack-cli": versions["webpack-cli"],
+      "webpack-dev-server": versions["webpack-dev-server"],
+      "copy-webpack-plugin": versions["copy-webpack-plugin"],
+      "ts-loader": versions["ts-loader"],
     },
   },
   undefined,

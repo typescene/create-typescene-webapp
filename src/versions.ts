@@ -1,0 +1,17 @@
+export default {
+  "typescene": "beta",
+  "@typescene/webapp": "beta",
+  "typescript": "^3.9.7",
+  "webpack": "^4.44.0",
+  "webpack-cli": "^3.3.12",
+  "webpack-dev-server": "^3.11.0",
+  "copy-webpack-plugin": "^6.0.3",
+  "ts-loader": "^8.0.1",
+  "@babel/core": "^7.10.5",
+  "@babel/plugin-transform-runtime": "^7.10.5",
+  "@babel/plugin-transform-react-jsx": "^7.10.4",
+  "@babel/preset-env": "^7.10.4",
+  "@babel/runtime": "^7.10.5",
+  "babel-loader": "^8.1.0",
+  "parcel-bundler": "^1.12.4",
+};

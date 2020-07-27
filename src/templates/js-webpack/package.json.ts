@@ -1,4 +1,5 @@
 import config from "../../config";
+import versions from "../../versions";
 
 export const name = "package.json";
 export const file = JSON.stringify(
@@ -10,25 +11,29 @@ export const file = JSON.stringify(
     "author": "Your name",
     "license": "UNLICENSED",
     "keywords": [],
+    "prettier": {},
     "main": "index.js",
     "scripts": {
       "start": "webpack-dev-server --hot --config src/webpack.config.js --no-info --open",
       "build": "webpack -p --config src/webpack.config.js",
     },
     "dependencies": {
-      "@typescene/webapp": "^2.0.0",
+      "typescene": versions.typescene,
+      "@typescene/webapp": versions["@typescene/webapp"],
     },
     "devDependencies": {
-      "@babel/core": "^7.5.5",
-      "@babel/plugin-transform-react-jsx": config.jsx ? "^7.3.0" : undefined,
-      "@babel/plugin-transform-runtime": "^7.5.5",
-      "@babel/preset-env": "^7.5.5",
-      "@babel/runtime": "^7.5.5",
-      "babel-loader": "^8.0.6",
-      "webpack": "^4.31.0",
-      "webpack-cli": "^3.3.2",
-      "webpack-dev-server": "^3.3.1",
-      "copy-webpack-plugin": "^5.0.3",
+      "webpack": versions.webpack,
+      "webpack-cli": versions["webpack-cli"],
+      "webpack-dev-server": versions["webpack-dev-server"],
+      "copy-webpack-plugin": versions["copy-webpack-plugin"],
+      "@babel/core": versions["@babel/core"],
+      "@babel/plugin-transform-react-jsx": config.jsx
+        ? versions["@babel/plugin-transform-react-jsx"]
+        : undefined,
+      "@babel/plugin-transform-runtime": versions["@babel/plugin-transform-runtime"],
+      "@babel/preset-env": versions["@babel/preset-env"],
+      "@babel/runtime": versions["@babel/runtime"],
+      "babel-loader": versions["babel-loader"],
     },
   },
   undefined,
