@@ -1,9 +1,6 @@
 {
   "name": "create-typescene-webapp",
-  "version": "1.3.0-beta1",
-  "publishConfig": {
-    "tag": "beta"
-  },
+  "version": "1.3.0",
   "description": "Generator for Web apps using the Typescene framework",
   "author": "Jelmer Cormont",
   "license": "MIT",
@@ -37,7 +34,7 @@
   },
   "devDependencies": {
     "@types/node": "^12.6.6",
-    "typescript": "^3.9.7",
+    "typescript": "4.0",
     "rimraf": "^3.0.2"
   }
 }

@@ -1,7 +1,7 @@
 export default {
-  "typescene": "beta",
-  "@typescene/webapp": "beta",
-  "typescript": "^3.9.7",
+  "typescene": "3",
+  "@typescene/webapp": "^3.0.0",
+  "typescript": "4.0",
   "webpack": "^4.44.0",
   "webpack-cli": "^3.3.12",
   "webpack-dev-server": "^3.11.0",
