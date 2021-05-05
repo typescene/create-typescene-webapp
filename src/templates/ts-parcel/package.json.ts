@@ -23,7 +23,7 @@ export const file = JSON.stringify(
     },
     "devDependencies": {
       "typescript": versions.typescript,
-      "parcel-bundler": versions["parcel-bundler"],
+      "parcel": versions["parcel"],
     },
   },
   undefined,

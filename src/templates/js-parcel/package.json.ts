@@ -10,6 +10,7 @@ export const file = JSON.stringify(
     "description": "Typescene front end application",
     "author": "Your name",
     "license": "UNLICENSED",
+    "prettier": {},
     "keywords": [],
     "main": "index.js",
     "scripts": {
@@ -24,7 +25,7 @@ export const file = JSON.stringify(
       "@typescene/webapp": versions["@typescene/webapp"],
     },
     "devDependencies": {
-      "parcel-bundler": versions["parcel-bundler"],
+      "parcel": versions["parcel"],
     },
   },
   undefined,

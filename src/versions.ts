@@ -13,5 +13,5 @@ export default {
   "@babel/preset-env": "^7.14.1",
   "@babel/runtime": "^7.14.0",
   "babel-loader": "^8.2.2",
-  "parcel-bundler": "^2.0.0-beta.2",
+  "parcel": "2.0.0-beta.2",
 };
