@@ -25,14 +25,15 @@ npm run start
 
 You may use the following command line arguments to configure the installation.
 
-| Argument        | Effect                                                |
-| --------------- | ----------------------------------------------------- |
-| `--js`          | Use JS (ES6) only, instead of TypeScript              |
-| `--jsx`         | Include JSX (TSX) support                             |
-| `--bundler=`... | Use a specific bundler (either `webpack` or `parcel`) |
-| `--git`         | Initialize a Git repository                           |
-| `--yarn`        | Use Yarn instead of NPM                               |
-| `--overwrite`   | Force overwrite existing files                        |
+| Argument         | Effect                                                |
+| ---------------- | ----------------------------------------------------- |
+| `--js`           | Use JS (ES6+) only, instead of TypeScript             |
+| `--jsx`, `--tsx` | Include JSX (TSX) support                             |
+| `--bundler=`...  | Use a specific bundler (either `webpack` or `parcel`) |
+| `--target=`...   | Set build target (`es5`, `es6`, or `es8`)             |
+| `--git`          | Initialize a Git repository                           |
+| `--yarn`         | Use Yarn instead of NPM                               |
+| `--overwrite`    | Force overwrite existing files                        |
 
 ## Reach Out!
 

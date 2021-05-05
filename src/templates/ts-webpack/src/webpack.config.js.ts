@@ -12,10 +12,13 @@ module.exports = {
     chunkFilename: "[name].[chunkhash].bundle.js",
     path: path.resolve(__dirname, "../dist")
   },
+  externals: {
+    "typescene": "typescene",
+    "@typescene/webapp": "typescene"
+  },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"]
   },
-  devtool: "inline-source-map",
   module: {
     rules: [
       {
@@ -28,6 +31,10 @@ module.exports = {
   plugins: [
     new CopyPlugin({
       patterns: [
+        {
+          from: path.resolve(__dirname, "../node_modules/@typescene/webapp/umd"),
+          to: path.resolve(__dirname, "../dist/lib"),
+        },
         {
           from: path.resolve(__dirname, "public"),
           to: path.resolve(__dirname, "../dist"),

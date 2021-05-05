@@ -14,7 +14,8 @@ export const file = JSON.stringify(
     "prettier": {},
     "main": "index.js",
     "scripts": {
-      "start": "webpack-dev-server --hot --config src/webpack.config.js --no-info --open",
+      "start":
+        "webpack serve --hot --config src/webpack.config.js --mode development --devtool inline-source-map --open",
       "build": "webpack -p --config src/webpack.config.js",
     },
     "dependencies": {

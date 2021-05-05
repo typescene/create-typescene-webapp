@@ -102,8 +102,9 @@ if (process.argv.some(a => a === "-h" || a === "-?" || a === "--help")) {
   console.log(
     "Options:\n\n" +
       "  -j, --js         Do NOT install and use TypeScript\n" +
-      "  --jsx            Include JSX support\n" +
+      "  --jsx, --tsx     Include JSX support\n" +
       "  --bundler=<...>  Use a specific bundler (webpack or parcel)\n" +
+      "  --target=<...>   Set build target (es5, es6, or es8)\n" +
       "  --yarn           Use Yarn instead of NPM\n" +
       "  -g, --git        Initialize git repository\n" +
       "  --overwrite      Force overwrite files in existing folder\n" +

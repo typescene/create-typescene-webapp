@@ -14,4 +14,6 @@ export default class MainActivity extends PageViewActivity.with(view) {
     console.log("MainActivity is now active");
   }
 }
+
+MainActivity.autoUpdate(module);
 `;

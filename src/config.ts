@@ -36,6 +36,9 @@ const config = {
 
   /** Bundler (defaults to webpack) */
   bundler: (getOption("--bundler") || getOption("-b") || "webpack").toLowerCase(),
+
+  /** Build target (ES version) */
+  target: (getOption("--target") || "es5").toLowerCase(),
 };
 
 export default config;
