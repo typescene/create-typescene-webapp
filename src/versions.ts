@@ -4,7 +4,7 @@ export default {
   "typescript": "*",
   "webpack": "^5.36.2",
   "webpack-cli": "^4.6.0",
-  "webpack-dev-server": "^3.11.2",
+  "webpack-plugin-serve": "^1.4.1",
   "copy-webpack-plugin": "^8.1.1",
   "ts-loader": "^9.1.1",
   "@babel/core": "^7.14.0",

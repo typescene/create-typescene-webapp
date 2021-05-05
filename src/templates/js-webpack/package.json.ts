@@ -4,19 +4,10 @@ import versions from "../../versions";
 export const name = "package.json";
 export const file = JSON.stringify(
   {
-    "name": config.name,
-    "version": "1.0.0",
-    "private": true,
-    "description": "Typescene front end application",
-    "author": "Your name",
-    "license": "UNLICENSED",
-    "keywords": [],
-    "prettier": {},
-    "main": "index.js",
+    ...config.packageBase,
     "scripts": {
-      "start":
-        "webpack serve --hot --config src/webpack.config.js --mode development --devtool inline-source-map --open",
-      "build": "webpack -p --config src/webpack.config.js",
+      "start": "webpack --config src/webpack.config.dev.js",
+      "build": "webpack --config src/webpack.config.js",
     },
     "dependencies": {
       "typescene": versions.typescene,
@@ -25,7 +16,7 @@ export const file = JSON.stringify(
     "devDependencies": {
       "webpack": versions.webpack,
       "webpack-cli": versions["webpack-cli"],
-      "webpack-dev-server": versions["webpack-dev-server"],
+      "webpack-plugin-serve": versions["webpack-plugin-serve"],
       "copy-webpack-plugin": versions["copy-webpack-plugin"],
       "@babel/core": versions["@babel/core"],
       "@babel/plugin-transform-react-jsx": config.jsx

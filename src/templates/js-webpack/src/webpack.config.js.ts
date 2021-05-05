@@ -6,6 +6,7 @@ const path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
+  mode: "production",
   entry: {
     app: path.resolve(__dirname, "app.js")
   },

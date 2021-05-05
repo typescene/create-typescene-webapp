@@ -39,6 +39,19 @@ const config = {
 
   /** Build target (ES version) */
   target: (getOption("--target") || "es5").toLowerCase(),
+
+  /** Base object for `package.json` file */
+  packageBase: {
+    "name": name,
+    "version": "1.0.0",
+    "private": true,
+    "description": "Your application description",
+    "author": "Your name",
+    "license": "UNLICENSED",
+    "keywords": [],
+    "prettier": {},
+    "main": "index.js",
+  },
 };
 
 export default config;
