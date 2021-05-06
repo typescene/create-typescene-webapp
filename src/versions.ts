@@ -1,4 +1,4 @@
-export default {
+const VERSIONS = {
   "typescene": "3",
   "@typescene/webapp": "^3.1.0",
   "typescript": "*",
@@ -14,4 +14,17 @@ export default {
   "@babel/runtime": "^7.14.0",
   "babel-loader": "^8.2.2",
   "parcel": "2.0.0-beta.2",
+  "@rollup/plugin-node-resolve": "^13.0.0",
+  "@rollup/plugin-typescript": "^8.2.1",
+  "rollup-plugin-livereload": "^2.0.0",
+  "rollup-plugin-serve": "^1.1.0",
+  "rollup": "^2.47.0",
 };
+
+export function depend(...packages: Array<keyof typeof VERSIONS | undefined>) {
+  let result: any = {};
+  for (let p of packages) {
+    if (p) result[p] = VERSIONS[p];
+  }
+  return result;
+}

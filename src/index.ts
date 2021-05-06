@@ -11,7 +11,11 @@ function main() {
     if (!config.name) {
       throw Error("Please specify a project name");
     }
-    if (config.bundler !== "webpack" && config.bundler !== "parcel") {
+    if (
+      config.bundler !== "webpack" &&
+      config.bundler !== "parcel" &&
+      config.bundler !== "rollup"
+    ) {
       throw Error("Invalid bundler: " + config.bundler);
     }
 

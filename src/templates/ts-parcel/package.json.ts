@@ -1,5 +1,5 @@
 import config from "../../config";
-import versions from "../../versions";
+import { depend } from "../../versions";
 
 export const name = "package.json";
 export const file = JSON.stringify(
@@ -9,14 +9,8 @@ export const file = JSON.stringify(
       "start": "parcel src/index.html --open",
       "build": "parcel build src/index.html",
     },
-    "dependencies": {
-      "typescene": versions.typescene,
-      "@typescene/webapp": versions["@typescene/webapp"],
-    },
-    "devDependencies": {
-      "typescript": versions.typescript,
-      "parcel": versions["parcel"],
-    },
+    "dependencies": depend("typescene", "@typescene/webapp"),
+    "devDependencies": depend("typescript", "parcel"),
   },
   undefined,
   "  "
