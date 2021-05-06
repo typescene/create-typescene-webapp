@@ -6,17 +6,17 @@ export const file = JSON.stringify(
   {
     ...config.packageBase,
     "scripts": {
-      "start": "webpack --config src/webpack.config.dev.js",
-      "build": "webpack --config src/webpack.config.js",
+      "start": "rollup --config rollup.config.dev.js -w",
+      "build": "rollup --config rollup.config.js",
     },
     "dependencies": depend("typescene", "@typescene/webapp"),
     "devDependencies": depend(
-      "typescript",
-      "webpack",
-      "webpack-cli",
-      "webpack-plugin-serve",
-      "copy-webpack-plugin",
-      "ts-loader"
+      "@rollup/plugin-node-resolve",
+      "@rollup/plugin-typescript",
+      "rollup-plugin-livereload",
+      "rollup-plugin-serve",
+      "rollup",
+      "typescript"
     ),
   },
   undefined,

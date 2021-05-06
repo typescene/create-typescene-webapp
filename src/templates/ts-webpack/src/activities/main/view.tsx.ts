@@ -2,11 +2,9 @@ import config from "../../../../../config";
 
 export const name = config.jsx && "src/activities/main/view.tsx";
 export const file = `
-import { HMR } from "@typescene/webapp";
 import { JSX } from "typescene";
 
-export default HMR.enableViewReload(
-  module,
+export default (
   <cell>
     <centerrow>
       <label>Hello, world!</label>

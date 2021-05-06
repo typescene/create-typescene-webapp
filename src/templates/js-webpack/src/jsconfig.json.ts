@@ -2,7 +2,7 @@ import config from "../../../config";
 
 const targetAlias: any = { es8: "es2017" };
 
-export const name = "src/tsconfig.json";
+export const name = "src/jsconfig.json";
 export const file = JSON.stringify(
   {
     "compilerOptions": {
@@ -13,9 +13,6 @@ export const file = JSON.stringify(
       "lib": ["es2015", "dom"],
       "jsx": config.jsx ? "react" : undefined,
       "jsxFactory": config.jsx ? "JSX" : undefined,
-      "experimentalDecorators": true,
-      "downlevelIteration": true,
-      "sourceMap": true,
     },
   },
   undefined,

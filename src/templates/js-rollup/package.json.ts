@@ -6,11 +6,16 @@ export const file = JSON.stringify(
   {
     ...config.packageBase,
     "scripts": {
-      "start": "parcel src/index.html --open",
-      "build": "parcel build src/index.html",
+      "start": "rollup --config rollup.config.dev.js -w",
+      "build": "rollup --config rollup.config.js",
     },
     "dependencies": depend("typescene", "@typescene/webapp"),
-    "devDependencies": depend("parcel"),
+    "devDependencies": depend(
+      "@rollup/plugin-node-resolve",
+      "rollup-plugin-livereload",
+      "rollup-plugin-serve",
+      "rollup"
+    ),
   },
   undefined,
   "  "

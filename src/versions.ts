@@ -1,17 +1,30 @@
-export default {
+const VERSIONS = {
   "typescene": "3",
-  "@typescene/webapp": "^3.0.0",
-  "typescript": "4.0",
-  "webpack": "^4.44.0",
-  "webpack-cli": "^3.3.12",
-  "webpack-dev-server": "^3.11.0",
-  "copy-webpack-plugin": "^6.0.3",
-  "ts-loader": "^8.0.1",
-  "@babel/core": "^7.10.5",
-  "@babel/plugin-transform-runtime": "^7.10.5",
-  "@babel/plugin-transform-react-jsx": "^7.10.4",
-  "@babel/preset-env": "^7.10.4",
-  "@babel/runtime": "^7.10.5",
-  "babel-loader": "^8.1.0",
-  "parcel-bundler": "^1.12.4",
+  "@typescene/webapp": "^3.1.0",
+  "typescript": "*",
+  "webpack": "^5.36.2",
+  "webpack-cli": "^4.6.0",
+  "webpack-plugin-serve": "^1.4.1",
+  "copy-webpack-plugin": "^8.1.1",
+  "ts-loader": "^9.1.1",
+  "@babel/core": "^7.14.0",
+  "@babel/plugin-transform-runtime": "^7.13.15",
+  "@babel/plugin-transform-react-jsx": "^7.13.12",
+  "@babel/preset-env": "^7.14.1",
+  "@babel/runtime": "^7.14.0",
+  "babel-loader": "^8.2.2",
+  "parcel": "2.0.0-beta.2",
+  "@rollup/plugin-node-resolve": "^13.0.0",
+  "@rollup/plugin-typescript": "^8.2.1",
+  "rollup-plugin-livereload": "^2.0.0",
+  "rollup-plugin-serve": "^1.1.0",
+  "rollup": "^2.47.0",
 };
+
+export function depend(...packages: Array<keyof typeof VERSIONS | undefined>) {
+  let result: any = {};
+  for (let p of packages) {
+    if (p) result[p] = VERSIONS[p];
+  }
+  return result;
+}
