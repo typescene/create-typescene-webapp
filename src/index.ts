@@ -107,7 +107,7 @@ if (process.argv.some(a => a === "-h" || a === "-?" || a === "--help")) {
     "Options:\n\n" +
       "  -j, --js         Do NOT install and use TypeScript\n" +
       "  --jsx, --tsx     Include JSX support\n" +
-      "  --bundler=<...>  Use a specific bundler (webpack or parcel)\n" +
+      "  --bundler=<...>  Use a specific bundler (webpack, parcel, or rollup)\n" +
       "  --target=<...>   Set build target (es5, es6, or es8)\n" +
       "  --yarn           Use Yarn instead of NPM\n" +
       "  -g, --git        Initialize git repository\n" +
